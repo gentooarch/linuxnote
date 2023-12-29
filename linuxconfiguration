@@ -1,0 +1,12 @@
+To set a static IP address using dhcpcd on a Linux system, you can follow these general steps:
+
+1. Open the configuration file for dhcpcd with a text editor (e.g., nano or vim). The location of the configuration file might vary between different Linux distributions, but it's commonly found at /etc/dhcpcd.conf.
+
+2. Find the section of the configuration file that pertains to the network interface for which you want to set a static IP address.
+
+3. Add the following lines to set a static IP address, subnet mask, default gateway, and DNS servers. Replace the example values with your network configuration information:
+
+interface eth0
+static ip_address=192.168.1.100/24
+static routers=192.168.1.1
+static domain_name_servers=8.8.8.8 8.8.4.4
